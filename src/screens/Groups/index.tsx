@@ -1,10 +1,12 @@
-import { View, Text, StatusBar } from "react-native";
+import { Container, Title } from "./styles";
 
-export function Group(){
+export function Group() {
   return (
-    <View>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Container>
+      <Title>
+        Teams
+      </Title>
+    </Container>
+    
   )
 }
