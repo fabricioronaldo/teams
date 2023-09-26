@@ -1,9 +1,10 @@
-import { useState } from "react";
-import { Highlight } from "@components/Highlight";
-import { Header } from "@components/Header";
-import { Container, Title } from "./styles";
-import { GroupCard } from "@components/GroupCard";
-import { FlatList } from "react-native";
+import { useState } from 'react';
+import { Highlight } from '@components/Highlight';
+import { Header } from '@components/Header';
+import { Container, Title } from './styles';
+import { GroupCard } from '@components/GroupCard';
+import { FlatList } from 'react-native';
+import { ListEmpty } from '@components/ListEmpty';
 
 
 export function Group() {
@@ -24,6 +25,12 @@ export function Group() {
         renderItem={({ item }) => (
           <GroupCard 
             title={item}
+          />
+        )}
+        contentContainerStyle={groups.length === 0 && {flex: 1}}
+        ListEmptyComponent={() => (
+          <ListEmpty 
+            message="Vamos cadastrar a primeira turma?"
           />
         )}
       />
