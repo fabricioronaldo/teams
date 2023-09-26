@@ -5,6 +5,7 @@ import { Container, Title } from './styles';
 import { GroupCard } from '@components/GroupCard';
 import { FlatList } from 'react-native';
 import { ListEmpty } from '@components/ListEmpty';
+import { Button } from '@components/Button';
 
 
 export function Group() {
@@ -34,7 +35,9 @@ export function Group() {
           />
         )}
       />
-
+      <Button 
+        title="Criar uma nova turma"
+      />    
     </Container>
     
   )
