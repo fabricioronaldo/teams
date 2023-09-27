@@ -10,7 +10,7 @@ import { Button } from '@components/Button';
 
 export function Group() {
 
-  const [groups, setGroups] = useState<string[]>(['Galera de São Gonçalo','Galera de Araruama']);
+  const [groups, setGroups] = useState<string[]>([]);
 
   return (
     <Container>
