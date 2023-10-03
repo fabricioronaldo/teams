@@ -6,12 +6,13 @@ import { Input } from '@components/Input';
 import { Filter } from '@components/Fliter';
 import { FlatList } from 'react-native';
 import { useState } from 'react';
+import { PalyerCard } from '@components/PlayerCard';
 
 
 export function Players() {
 
   const [team, setTeam] = useState('Time A');
-  const [players, setPlayers] = useState([]);
+  const [players, setPlayers] = useState(['Fabricio', 'Ronaldo']);
 
   return (
 
@@ -47,7 +48,19 @@ export function Players() {
           {players.length}
         </NumberOfPlayers>
       </HeaderList>
+
+      <FlatList 
+        data={players}
+        keyExtractor={item => item}
+        renderItem={({item})=>(
+          <PalyerCard 
+            name={item}
+            onRemove={() => {}}
+          />
+        )}
+      />
     </Container>
+
 
   );
 }
